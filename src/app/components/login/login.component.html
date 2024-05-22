@@ -1,0 +1,75 @@
+
+<div *ngIf="loginMessage==false" class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form [formGroup]="loginForm" class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Ders Programı Bilgi Sistemi</h1>
+        <div class="form-floating mb-3">
+
+          <input formControlName="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+          <label for="floatingInput">E-Posta</label>
+        </div>
+        <div class="form-floating mb-3">
+
+          <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password">
+          <label for="floatingPassword">Parola</label>
+        </div>
+        <button routerLink="/login/{{typeOfUser}}" class="w-100 btn btn-lg btn-primary" (click)="getUser()">Giriş Yap</button>
+        <hr class="my-4">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<div *ngIf="loginMessage==true" class="container col-xl-10 col-xxl-8 px-4 py-5">
+  <div class="row align-items-center g-lg-5 py-5">
+    <div class="col-md-10 mx-auto col-lg-5">
+      <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary">
+
+        <div class="alert alert-success" role="alert">
+          <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Giriş Başarılı!</h1>
+        </div>
+        <hr class="my-4">
+        <button routerLink="/login/{{typeOfUser}}" class="w-100 btn btn-lg btn-primary" >Panele Git</button>
+        <hr class="my-4">
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!--
+<main *ngIf="loginMessage==false" class="form-signin w-100 m-auto">
+
+  <img src="https://ilkadimanadolu.meb.k12.tr/meb_iys_dosyalar/55/18/767061/resimler/2023_09/k_17214108_Ders_Program-3.jpg" style="width:300px;height:200px;">
+
+
+  <form [formGroup]="loginForm">
+    <h1 class="h3 mb-3 fw-normal">Giriş Yap</h1>
+
+    <div class="form-floating">
+      <input formControlName="email" type="email" class="form-control" id="email" placeholder="name@example.com">
+      <label for="floatingInput">E-Posta</label>
+    </div>
+    <div class="form-floating">
+      <input formControlName="password" type="password" class="form-control" id="password" placeholder="Password">
+      <label for="floatingPassword">Parola</label>
+    </div>
+    <button class="btn btn-primary w-100 py-2" (click)="getUser()">Giriş Yap</button>
+  </form>
+</main>
+-->
+
+<!--
+<div *ngIf="loginMessage==true" class="alert alert-success" role="alert">
+  <div class="centerPanelMessage"><p>Giriş Başarılı</p></div>
+  <button routerLink="/success" class="btn btn-primary w-100 py-2" >Panele Git</button>
+</div>
+-->
+

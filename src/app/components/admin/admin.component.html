@@ -1,0 +1,11 @@
+<app-profile></app-profile>
+<div *ngIf="activeUser.userTypeId == 1" class = "container">
+    <div class="row">
+        <div class="col-md-3">
+            <app-admin-menu></app-admin-menu>
+        </div>
+        <div class="col-md-9">
+            <app-admin-content></app-admin-content>
+        </div>
+    </div>
+</div>
