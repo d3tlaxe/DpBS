@@ -8,11 +8,10 @@ import { StudentComponent } from './components/student/student.component';
 
 const routes: Routes = [
   {path:"", pathMatch:"full", component:LoginComponent},
-  //{path:"login", component:LoginComponent},
   {path:"success", component:ContainerComponent},
   {path:"login/admin", component:AdminComponent},
   {path:"login/prelector", component:PrelectorComponent},
-  {path:"login/student", component:StudentComponent}
+  {path:"login/student", component:StudentComponent},
 ];
 
 @NgModule({

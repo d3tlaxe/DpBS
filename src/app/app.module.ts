@@ -17,7 +17,6 @@ import { StudentMenuComponent } from './components/student-menu/student-menu.com
 import { StudentContentComponent } from './components/student-content/student-content.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ContainerComponent } from './components/container/container.component';
-import { AdminDersEkleComponent } from './components/admin-ders-ekle/admin-ders-ekle.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,6 @@ import { AdminDersEkleComponent } from './components/admin-ders-ekle/admin-ders-
     StudentContentComponent,
     ProfileComponent,
     ContainerComponent,
-    AdminDersEkleComponent
   ],
   imports: [
     BrowserModule,

@@ -16,6 +16,7 @@ export class AdminContentComponent implements OnInit {
   addLessonForm : FormGroup;
 
 
+
   constructor(private formbuilder:FormBuilder, 
     private httpClient: HttpClient,
     private lessonService:LessonService){
@@ -57,19 +58,13 @@ export class AdminContentComponent implements OnInit {
       lesson.isImperative = this.getImperative(lessonFormModel);
 
 
-
-      console.log(lesson.LessonHour);
-
-
       this.lessonService.addLesson(lesson).subscribe(response =>{
         console.log(response.message);
-        console.log(lesson.LessonHour);
+        console.log("Bu değer formdan doğru geliyor ama veritabanında varsayılan değer kaydediliyor." + lesson.LessonHour);
       })
-      //return lesson;
-      console.log("Ben burada ders bastım " + lesson.Name);
+
     }else{
       console.log("Lütfen Tüm Alanları Doldurunuz");
-      //return null;
     }
   }
 
@@ -118,6 +113,7 @@ export class AdminContentComponent implements OnInit {
     }
     return Imperative;
   }
+
 
 
 }
